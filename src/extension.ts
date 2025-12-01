@@ -381,7 +381,7 @@ class RdbgAdapterDescriptorFactory implements DebugAdapterDescriptorFactory, Ver
 					await this.sleepMs(500);
 					break;
 				case VersionManager.Mise:
-					command = this.makeShellCommand('rbenv exec ruby -- ruby' + rubyEnvCommand);
+					command = this.makeShellCommand('mise exec ruby -- ruby' + rubyEnvCommand);
 					await this.injectRubyEnvironment(command, cwd);
 					break;
 				default:
